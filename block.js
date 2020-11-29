@@ -26,11 +26,9 @@ const fileSources = {
 	// end {blockName}`,
 	scss: `
 	// start .{blockName}
-	.{blockName} \{
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
+.{blockName} \{
+	
+
 	@include media-breakpoint-up(sm) {}
 	//
 	@include media-breakpoint-between(md, xl) { }

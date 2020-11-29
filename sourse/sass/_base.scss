@@ -31,18 +31,18 @@ html {
 	// overflow-x: hidden;
 }
 
-h1 {
+h1, .h1 {
 	@extend .gradient;
 	line-height: 125%;
 	font-weight: 800;
 
 }
 
-h2 {
+h2, .h2 {
 	@extend .h1;
 }
 
-h5 {
+h5, .h5 {
 	line-height: 160%;
 }
 
@@ -441,7 +441,8 @@ iframe {
 }
 
 .gradient {
-	background: linear-gradient(135deg, #5F3DC1 0%, #538F16 100%);
+	background: linear-gradient(165deg, #5F3DC1 0%, #538F16 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+
