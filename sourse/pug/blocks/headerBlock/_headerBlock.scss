@@ -2,15 +2,29 @@
 .headerBlock {
 	margin-bottom: 1px;
 	padding-bottom: 0;
-	min-height: 736px;
-
+	min-height: 735px;
+	--sPT: #{rem(65)};
+	// overflow: hidden;
 	h1 {
 		@extend .gradient;
 		font-weight: 800;
 	}
 
 	h5 {
-		margin-bottom: rem(30);
+		margin-bottom: rem(50);
+		font-weight: 600;
+		max-width: rem(500);
+	}
+
+	p {
+		max-width: rem(500);
+	}
+
+	&__subtitle {
+		font-weight: 600;
+		font-size: $h5-font-size;
+
+		margin-bottom: rem(17);
 	}
 
 
@@ -21,27 +35,33 @@
 	&__imgWrap {
 		position: absolute;
 		z-index: 2;
-		bottom: rem(-680);
+		bottom: rem(-670);
 		left: 0;
+
+		img {
+			max-width: rem(450);
+		}
 	}
 
 	&__txt {
 		position: absolute;
 		z-index: 5;
 		right: 80px;
-		bottom: -630px;
+		bottom: -600px;
 		color: #fff;
 		max-width: rem(240);
 	}
 
-	&__txt {
-		font-size: $h6-font-size;
+	&__name {
+		font-size: $h5-font-size;
 		font-weight: 600;
-
+		margin-bottom: rem(5);
 	}
 
 	&__position {
 		font-size: 13px;
+		line-height: 170%;
+
 	}
 
 	@include media-breakpoint-up(xl) {}

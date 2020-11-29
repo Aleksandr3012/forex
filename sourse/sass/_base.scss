@@ -26,14 +26,29 @@ html {
 
 body,
 html {
-
 	font-size: var(--fontSizeBase);
 	// @include font-size(1rem);
 	// overflow-x: hidden;
 }
 
+h1 {
+	@extend .gradient;
+	line-height: 125%;
+	font-weight: 800;
+
+}
+
 h2 {
 	@extend .h1;
+}
+
+h5 {
+	line-height: 160%;
+}
+
+p {
+	line-height: 170%;
+	margin-bottom: rem(25);
 }
 
 
