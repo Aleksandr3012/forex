@@ -33,4 +33,22 @@
 		}
 	}
 }
-
+.regBlock{
+	background: linear-gradient(135deg, #586E5D 0%, #65836C 96.35%);
+	color: #ffffff;
+	padding: rem(66) 0;
+	position: relative;
+	z-index: 2;
+	&::before{
+		content: 
+		 image-set(url(../img/@1x/webp/regblock-bg.webp) 1x,
+		 	url(../img/@2x/webp/regblock-bg.webp) 2x,
+		 ); 
+		z-index: -1;
+	}
+	&__title{
+		@include rfs(30px);
+		font-weight: 800;
+		line-height: 140%;
+	}
+}

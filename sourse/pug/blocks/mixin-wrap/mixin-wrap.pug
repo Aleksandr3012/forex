@@ -20,3 +20,14 @@ mixin ie11()
 	//- modernizer and for ie11
 	 
 	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+
+mixin regBlock(t=`Изучите самую совершенную торговую систему кандидата экономических наук Николая Еремеева и&nbsp;отработайте её&nbsp;на&nbsp;практике вместе с&nbsp;автором!`, btn=`Регистрируйтесь на&nbsp;тренинг и&nbsp;зарабатывайте!`)
+	+b.regBlock
+		.container
+			.row.align-items-center
+				.col-7
+					if t
+						+e.title!= t
+					block
+				.col
+					+e.btn.btn-warning(href="#")!= btn
