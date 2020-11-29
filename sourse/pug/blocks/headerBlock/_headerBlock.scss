@@ -3,7 +3,10 @@
 	margin-bottom: 1px;
 	padding-bottom: 0;
 	min-height: 735px;
-	--sPT: #{rem(65)};
+	--sPT: #{rem(25)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(65)};
+	}
 	// overflow: hidden;
 	h1 {
 		@extend .text-gradient;
@@ -11,7 +14,10 @@
 	}
 
 	h5 {
-		margin-bottom: rem(50);
+		margin-bottom: rem(25);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(50);
+		}
 		font-weight: 600;
 		max-width: rem(500);
 	}
@@ -37,23 +43,39 @@
 			text-align: center;
 			margin-top: rem(-90);
 		}
+		@include media-breakpoint-only(sm) {
+			img {
+				max-width: rem(350);
+			}
+		}
+		@include media-breakpoint-only(md) {
+			img {
+				max-width: rem(400);
+			}
+		}
 		@include media-breakpoint-up(lg) {
 			position: absolute;
 			z-index: 2;
 			bottom: rem(-670);
 			left: 0;
+			img {
+				max-width: rem(450);
+			}
 		}
 
-		img {
-			max-width: rem(450);
-		}
 	}
 
 	&__txt {
 		position: absolute;
 		z-index: 5;
-		right: 80px;
-		bottom: -600px;
+		bottom: rem(90);
+		@include media-breakpoint-down(lg) {
+			@include a-cent(x);
+		}
+		@include media-breakpoint-up(lg) {
+			right: 80px;
+			bottom: -600px;
+		}
 		color: #fff;
 		max-width: rem(240);
 	}
