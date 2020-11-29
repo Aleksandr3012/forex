@@ -36,6 +36,9 @@
 
 	&__picCol {
 		position: relative;
+		@include media-breakpoint-up(xl) {
+			margin-right: rem(-80);
+		}
 	}
 
 	&__imgWrap {
@@ -59,7 +62,12 @@
 			bottom: rem(-670);
 			left: 0;
 			img {
-				max-width: rem(450);
+				// max-width: rem(450);
+			}
+		}
+		@include media-breakpoint-up(xl) {
+			img {
+				width: 576px;
 			}
 		}
 
