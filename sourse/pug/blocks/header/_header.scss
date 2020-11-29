@@ -1,0 +1,15 @@
+// start .header
+.header {
+
+	position: relative;
+	background: linear-gradient(29.22deg, rgba(255, 255, 255, 0.71) 42.91%, rgba(255, 255, 255, 0) 62.57%);
+
+
+
+
+	@include media-breakpoint-up(xs) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.header

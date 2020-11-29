@@ -1,0 +1,14 @@
+mixin sHowItWorks(data)
+	// start sHowItWorks
+	+b.SECTION.sHowItWorks.section#sHowItWorks&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Как это работает:
+				
+			mixin item(i,t)
+				+e.item
+			+item()
+			+item()
+			+item()
+			+item()
+	// end sHowItWorks

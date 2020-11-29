@@ -1,0 +1,85 @@
+// start .headerBlock
+.headerBlock {
+	margin-bottom: 1px;
+	padding-bottom: 0;
+	min-height: 736px;
+
+	h1 {
+		@extend .gradient;
+		font-weight: 800;
+	}
+
+	h5 {
+		margin-bottom: rem(30);
+	}
+
+
+	&__picCol {
+		position: relative;
+	}
+
+	&__imgWrap {
+		position: absolute;
+		z-index: 2;
+		bottom: rem(-680);
+		left: 0;
+	}
+
+	&__txt {
+		position: absolute;
+		z-index: 5;
+		right: 80px;
+		bottom: -630px;
+		color: #fff;
+		max-width: rem(240);
+	}
+
+	&__txt {
+		font-size: $h6-font-size;
+		font-weight: 600;
+
+	}
+
+	&__position {
+		font-size: 13px;
+	}
+
+	@include media-breakpoint-up(xl) {}
+
+	@include media-breakpoint-up(lg) {}
+
+	@include media-breakpoint-up(md) {}
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+	//
+	@include media-breakpoint-between(md, xl) {}
+
+
+	//
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	//
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+
+}
+
+// end.headerBlock
