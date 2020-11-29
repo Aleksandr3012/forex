@@ -18,6 +18,11 @@
 		position: relative;
 		width: 121.33px;
 		height: 121.33px;
+		@include media-breakpoint-down(sm) {
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: rem(20);
+		}
 		
 
 		&::before {
