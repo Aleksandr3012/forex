@@ -1,4 +1,47 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			+e.row.row
+				.col
+					+e.publisher-txt
+						p.set-footer-date-js
+							span
+								script.
+									function InfoDVDCurrentYear(year) {
+										var cur = new Date();
+										if (cur.getFullYear() != year)
+											document.write(year + '&mdash;' + cur.getFullYear());
+										else document.write(year);
+									}
+
+									InfoDVDCurrentYear('2008');
+								| 	 © издательство
+								|
+							a(href='//www.info-dvd.ru/?utm_source=footer_link' target="_blank") Info-DVD.Ru
+						p
+							a(href='//www.infoclub.info/' target="_blank") Проект «Инфоклуб»
+						p ОГРНИП 316183200118945
+					+e.NAV.menu
+						ul
+							li: a(href='//info-dvd.ru/about/partnership', title='партнёрская программа', target='_blank') партнёрская программа
+							li: a(href='//info-dvd.ru/pages/privacy', title='политика конфиденциальности', target='_blank') политика конфиденциальности
+							li: a(href='//info-dvd.ru/pages/risk-warning', title='предупреждение о рисках', target='_blank')   предупреждение о рисках
+				//- +e.logo-col.col-3.col-lg-2
+				//- 	+e.logo-cont
+				//- 		img(loading="lazy" src="img/svg/footer-logo.svg" alt="")
+				.col-lg-5
+					+e.support
+						+e.bold-txt Служба поддержки:
+						+e.inline-links
+							a(href='//info.support-desk.ru/form', title='Задать свой вопрос', target='_blank')
+								span Задать свой вопрос
+							a(href='//info.support-desk.ru/?base=1', title='Частые вопросы и ответы на них', target="_blank")
+								span Частые вопросы и ответы на них
+					+e.callback
+						+e.bold-txt Позвоните нам:
+						+e.inline-links
+							script(src='//info-dvd.ru/codes/js/telephone-number.js')
+						+e.callback-txt
+								| или
+								|
+								a(href='http://info-dvd.ru/support/apply/' target='_blank') оставьте свой номер и мы вам перезвоним
