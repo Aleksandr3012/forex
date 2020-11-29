@@ -32,7 +32,7 @@ html {
 }
 
 h1, .h1 {
-	@extend .gradient;
+	@extend .text-gradient;
 	line-height: 125%;
 	font-weight: 800;
 
@@ -440,7 +440,7 @@ iframe {
 	/* Цвет фона */
 }
 
-.gradient {
+.text-gradient {
 	background: linear-gradient(165deg, #5F3DC1 0%, #538F16 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
