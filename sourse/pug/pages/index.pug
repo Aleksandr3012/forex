@@ -5,6 +5,7 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sHowItWorks/_sHowItWorks.pug
 include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sWhatYouGet/_sWhatYouGet.pug
 
 block variables
 	- let  mainPage= null
@@ -17,6 +18,7 @@ block pagecontent
 		+topLine() 
 		+headerBlock()
 	+sHowItWorks()
+	+sWhatYouGet()
 	+sForm()
 	+sContact()
 	+sQuestions

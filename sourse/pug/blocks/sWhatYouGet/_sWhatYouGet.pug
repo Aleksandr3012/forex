@@ -1,0 +1,36 @@
+mixin sWhatYouGet(data)
+	// start sWhatYouGet
+	+b.SECTION.sWhatYouGet.section#sWhatYouGet&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Что Вы получите на тренинге
+				
+			.row
+				mixin item(data)
+					.col-md-6
+						+e.item
+							+e.title!= data.title
+							+e.imgWrap
+								img.res-i.loading-lazy(src=`img/svg/youGet-${data.img}.svg`, alt="", loading="lazy")
+							p!= data.text
+				+item({
+					title: `Заработок на&nbsp;любом рынке`,
+					img: '1',
+					text: `Вы&nbsp;научитесь зарабатывать на&nbsp;рынке форекс, а&nbsp;применять полученные знания сможете и&nbsp;на&nbsp;форекс, и&nbsp;на&nbsp;любом другом финансовом рынке (акции, фьючерсы, криптовалюты)`
+				})
+				+item({
+					title: 'Стабильный доход при любой занятости',
+					img: '2',
+					text: `Если у&nbsp;Вас мало времени, Вы&nbsp;сможете тратить на&nbsp;торговлю всего 5-10 минут в&nbsp;день. Система подразумевает выбор подходящего стиля торговли в&nbsp;зависимости от&nbsp;Вашей занятости`
+				})
+				+item({
+					title: 'Высокая прибыльность с&nbsp;минимальными рисками',
+					img: '3',
+					text: `Вы&nbsp;сможете получать доходность до&nbsp;50% в&nbsp;месяц, рискуя в&nbsp;каждой сделке всего лишь одним процентом Ваших денег`
+				})
+				+item({
+					title: 'Автоматический заработок',
+					img: '4',
+					text: `Вы&nbsp;сможете заработать и&nbsp;вернуть себе стоимость тренинга уже во&nbsp;время обучения, копируя сделки автора на&nbsp;полном автомате`
+				})
+	// end sWhatYouGet
