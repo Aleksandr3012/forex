@@ -6,6 +6,7 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sHowItWorks/_sHowItWorks.pug
 include ../blocks/sQuestions/_sQuestions.pug
 include ../blocks/sWhatYouGet/_sWhatYouGet.pug
+include ../blocks/sGoldenLevel/_sGoldenLevel.pug
 
 block variables
 	- let  mainPage= null
@@ -21,6 +22,7 @@ block pagecontent
 	+sWhatYouGet()
 	+sForm()
 	+sContact()
+	+sGoldenLevel
 	+sQuestions
 	+regBlock({
 		t:`Мы&nbsp;продумали наш проект таким образом, чтобы каждый активный участник тренинга заработал деньги прямо во&nbsp;время обучения. Вам остаётся только воспользоваться этой возможностью.`,
