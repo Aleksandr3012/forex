@@ -41,15 +41,20 @@
 	position: relative;
 	z-index: 2;
 	&::before{
-		content: 
-		 image-set(url(../img/@1x/webp/regblock-bg.webp) 1x,
-		 	url(../img/@2x/webp/regblock-bg.webp) 2x,
-		 ); 
+		position: absolute;
 		z-index: -1;
+		pointer-events: none;
+	 
+		content:   	url(../img/@2x/webp/regblock-bg.webp);
+		 top: -72px;
 	}
 	&__title{
 		@include rfs(30px);
 		font-weight: 800;
 		line-height: 140%;
+		@include media-breakpoint-up(xl) {
+			margin-bottom: 0;
+		}
+		margin-bottom: 1rem;
 	}
 }

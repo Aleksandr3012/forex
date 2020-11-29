@@ -1,6 +1,8 @@
 .footer {
   color: $black;
-  background-color: #EEEFF2;
+	background-color: #EEEFF2;
+	position: relative;
+	z-index: 4;
 
   padding: rem(30) 0 ;
   @include media-breakpoint-up(lg){
