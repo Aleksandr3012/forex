@@ -1,15 +1,47 @@
+// start .sHowItWorks
+.sHowItWorks {
+	padding-bottom: calc(var(--sPB) * 1.08);
 
-	// start .sHowItWorks
-	.sHowItWorks {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
+	&__item {
+		height: calc(100% - #{rem(33px)});
+		margin-bottom: rem(33px);
+		@include media-breakpoint-up(xl) {
+			@include roww(59px)
+		}
+	}
+
+	&__imgWrap {
+		margin-left: 9px;
+		box-shadow: 0px 4px 21px rgba(0, 0, 0, 0.1);
+		border-radius: 50%;
+		padding: rem(36);
+		position: relative;
+		width: 121.33px;
+		height: 121.33px;
+		
+
+		&::before {
+			content: '';
+			@include a-cent;
+			width: 96px;
+			height: 96px;
+			background-image: url('../img/svg/how-it-work-wrap.svg');
+			background-repeat: no-repeat;
+			background-size: 99.5%;
+		}
+	}
+
+	&__text {
+		@extend .h5;
+		max-width: 872px;
+
+	}
+
+
+
+
 	@include media-breakpoint-up(sm) {}
-	//
 	@include media-breakpoint-between(md, xl) { }
-	//
 	@include media-breakpoint-only(xl) {}
-	//
 	@include media-breakpoint-down(xl) {}
 } // end.sHowItWorks
