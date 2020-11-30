@@ -44,7 +44,7 @@
 	&__imgWrap {
 		@include media-breakpoint-down(lg) {
 			text-align: center;
-			margin-top: rem(-90);
+			// margin-top: rem(-90);
 		}
 		@include media-breakpoint-only(sm) {
 			img {

@@ -1,0 +1,84 @@
+
+	// start .sIndicators
+.sIndicators {
+	padding-top: calc(var(--sPT) * 1.6);
+	.section-title {
+		padding-bottom: calc(var(--sTPB) / 1.3);
+	}
+
+	&__tableWrap {
+		overflow-x: auto;
+	}
+	
+	table {
+		width: 100%;
+		min-width: 1000px;
+	}
+	thead {
+		font-size: 10px;
+		vertical-align: bottom;
+		border-bottom: solid 1px #5F3DC1;
+
+		td {
+			max-width: 112px;
+			&:not(:first-child) {
+				padding-left: 10px;
+			}
+			padding-right: 10px;
+			padding-bottom: 10px;
+		}
+	}
+
+	tbody {
+		font-size: 14px;
+
+		tr {
+			border-bottom: solid 1px rgba($color: #5F3DC1, $alpha: 0.2);
+		}
+
+		td {
+			&:not(:first-child) {
+				padding-left: 10px;
+			}
+			padding-right: 10px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+
+			&:nth-child(3) {
+				font-size: 12px;
+			}
+
+			&:nth-child(n + 6) {
+				text-align: center;
+			}
+		}
+	}
+
+	td {
+		&:nth-child(1) {
+			width: 11%;
+		}
+		&:nth-child(2){
+			width: 9.5%;
+		}
+		&:nth-child(3){
+			width: 10%;
+		}
+		&:nth-child(4){
+			width: 8%;
+		}
+		&:nth-child(5) {
+			width: 8.5%;
+		}
+		&:nth-child(6) {
+			width: 9%;
+		}
+	}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sIndicators

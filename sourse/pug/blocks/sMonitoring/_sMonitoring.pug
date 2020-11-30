@@ -1,0 +1,12 @@
+mixin sMonitoring(data)
+	// start sMonitoring
+	+b.SECTION.sMonitoring.section#sMonitoring&attributes(attributes)
+		.container
+			+b.section-title
+				h2 А это мониторинг реального счёта, где автор ведёт торговлю по этой системе:
+				
+			+e.imgWrap(href="img/@2x/monitoring.png" data-fancybox="monitoring")
+				+pic('monitoring.png','','')
+			+e.link.scroll-link(href="#") Посмотрите мониторинг в реальном времени
+
+	// end sMonitoring

@@ -5,6 +5,10 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sHowItWorks/_sHowItWorks.pug
 include ../blocks/sWhatYouGet/_sWhatYouGet.pug
+include ../blocks/sAdvantage/_sAdvantage.pug
+include ../blocks/sVideo/_sVideo.pug
+include ../blocks/sIndicators/_sIndicators.pug
+include ../blocks/sMonitoring/_sMonitoring.pug
 
 block variables
 	- let  mainPage= null
@@ -17,7 +21,15 @@ block pagecontent
 		+topLine() 
 		+headerBlock()
 	+sHowItWorks()
+	+regBlock({
+		t:`Готовы уже сейчас записаться&nbsp;на&nbsp;обучение?`,
+		 btn:`Кликайте и регистрируйтесь!`
+	}).regBlock-sm
 	+sWhatYouGet()
+	+sAdvantage()
+	+sVideo()
+	+sIndicators()
+	+sMonitoring()
 	+sForm()
 	+sContact()
 	+regBlock({

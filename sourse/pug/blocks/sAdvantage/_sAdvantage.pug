@@ -1,0 +1,21 @@
+mixin sAdvantage(data)
+	// start sAdvantage
+	+b.SECTION.sAdvantage.section#sAdvantage&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Преимущества системы
+			+e.subtitle Чем хороша торговая система 5.0 и&nbsp;чем отличается от&nbsp;предыдущих систем Николая Еремеева:
+				
+			.row
+				mixin item(i,t)
+					+e.item.col-sm-6.col-lg-4
+						+e.imgWrap
+							img.res-i(src=`img/svg/advantage-${i}.svg`, alt="", loading="lazy")
+						p!= t
+				+item('1',`Она проста в&nbsp;применении и&nbsp;включает всего 2&nbsp;инструмента для анализа и&nbsp;торговли`)
+				+item('2',`Даёт чёткое понимание приоритетного движения актива в&nbsp;любой момент времени`)
+				+item('3',`Предполагает входы в&nbsp;сделку по&nbsp;простым и&nbsp;однозначным моделям, без поиска паттернов`)
+				+item('4',`Применима на&nbsp;любом активе, лишь&nbsp;бы был график`)
+				+item('5',`Не&nbsp;зависит от&nbsp;истории котировок и&nbsp;иных факторов, нужен только анализ текущей цены`)
+				+item('6',`Тщательно протестирована и&nbsp;показывает доходность около 200% за&nbsp;3&nbsp;месяца`)
+	// end sAdvantage

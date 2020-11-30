@@ -24,7 +24,7 @@ mixin btn(btn, href="#")
 	a.btn.btn-accent.scroll-link(href= href)&attributes(attributes)!= btn
 		i
 mixin regBlock(data)
-	+b.regBlock
+	+b.regBlock&attributes(attributes)
 		.container
 			.row.align-items-center
 				.col-xl-7

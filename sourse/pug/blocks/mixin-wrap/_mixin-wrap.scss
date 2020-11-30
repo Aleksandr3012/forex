@@ -57,4 +57,11 @@
 		}
 		margin-bottom: 1rem;
 	}
+
+	&-sm {
+		padding: rem(91) 0;
+		.regBlock__title {
+			@include rfs(40px);
+		}
+	}
 }

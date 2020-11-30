@@ -9,7 +9,7 @@ mixin sHowItWorks(data)
 				+e.item.row.align-items-center
 					.col-sm-auto
 						+e.imgWrap
-							img.res-i.loading-lazy(src=`img/svg/how-it-work-${i}.svg`, alt="", loading="lazy")
+							img.res-i(src=`img/svg/how-it-work-${i}.svg`, alt="", loading="lazy")
 					.col
 						+e.text!= data.text
 			+item('1',{
