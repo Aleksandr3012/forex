@@ -7,13 +7,14 @@ include components/pugination.pug
 include components/soc.pug
 include components/pic.pug
 include components/btn.pug
-
+mixin img(url)
+	img(class=(bg=="bg" ? "object-fit-js": null ) src=url alt="" loading='lazy')
 
 mixin arrow()
 	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
-		+icon('chevron-left')
+		+img('img/svg/arrow-left.svg')
 	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
-		+icon('chevron-right')
+		+img('img/svg/arrow-right.svg')
 //- /arrow for swiper-slider
 
 mixin ie11()
@@ -33,3 +34,26 @@ mixin regBlock(data)
 					block
 				.col
 					+btn(data.btn)
+mixin regBlockPrice(data)
+	+b.regBlock--price
+		.container
+			.row
+				.col-xl-8.col-lg-7
+					if data.t
+						h2.strong!= data.t
+					ul
+						li: span 6 занятий тренинга
+						li: span Домашние задания с проверкой
+						li: span 3 месяца сопровождения в Мастер-группе
+					.row
+						.col-xl-auto.col-lg-6
+							.h5 БОНУС: 
+							p 2&nbsp;дополнительных занятия с <br> куратором тренинга
+						.col-lg-6
+							.h5 БОНУС: 
+							p 2&nbsp;месяца автоматического копирования сделок автора
+				.col.align-self-end.text-center
+					.h5 Стоимость участия:
+					+e.price 28 200 р.
+					+e.price-old 47 000 р.
+					+btn(data.btn).mb-3

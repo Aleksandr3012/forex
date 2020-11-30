@@ -273,18 +273,7 @@ function eventHandler() {
 		watchOverflow: true,
 		spaceBetween: 0,
 		loop: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		pagination: {
-			el: ' .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-			// renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
-		},
+
 	}
 
 	const swiper4 = new Swiper('.sBanners__slider--js', {
@@ -298,18 +287,61 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
-	// modal window
 
-	window.onload = function () {
-		document.body.classList.add('loaded_hiding');
-		window.setTimeout(function () {
-			document.body.classList.add('loaded');
-			document.body.classList.remove('loaded_hiding');
-		}, 500);
-	}
+	const swiperRew = new Swiper('.sRews__slider--js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		slidesPerView: 1,
+		navigation: {
+			nextEl: '.sRews .swiper-button-next',
+			prevEl: '.sRews .swiper-button-prev',
+		},
+		pagination: {
+			el: '.sRews .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+			// renderBullet: function (index, className) {
+			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+			// }
+		},
+	});
+
+	//sQusetions js
+	$('.q-item-js').click(function () {
+		let allItems = document.querySelectorAll('.q-item-js');
+		let self = this;
+
+		for (let item of allItems) {
+			let currContent = item.querySelector('.q-content-js');
+
+			if (item === self) {
+				$(item).toggleClass('active');
+				$(currContent).slideToggle(function () {
+					$(this).toggleClass('active');
+				});
+			}
+			else {
+				$(item).removeClass('active');
+				$(currContent).slideUp(function () {
+					$(this).removeClass('active');
+				});
+			}
+
+		}
+
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
+}
+
+window.onload = function () {
+	document.body.classList.add('loaded_hiding');
+	window.setTimeout(function () {
+		document.body.classList.add('loaded');
+		document.body.classList.remove('loaded_hiding');
+	}, 100);
 }

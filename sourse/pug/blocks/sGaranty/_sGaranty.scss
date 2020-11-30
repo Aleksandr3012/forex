@@ -1,0 +1,51 @@
+
+	// start .sGaranty
+.sGaranty {
+	--sTPB: #{rem(96)};
+	--sPB: #{rem(0)};
+	h2{
+		margin-bottom: rem(20);
+	}
+	&__col:not(:last-child) {
+		
+		margin-bottom: rem(70);
+	}
+	&__item{
+		text-align: center;
+		border: 2px solid; 
+		border-image: linear-gradient(165deg, #5F3DC1 0%, #538F16 100%) 10;
+		@include media-breakpoint-up(xl){
+
+			padding: rem(56) rem(23) rem(10);
+		}
+		padding: rem(56) rem(15) rem(10);
+		position: relative;
+		&::before{
+			content: url(../img/svg/shield.svg);
+			width: rem(63 * 2);
+			background-color: #ffffff;
+			@include a-cent(x);
+			top: 0;
+			transform: translateY(-50%);
+		}
+	}	
+	&__title{
+		@include rfs(24px);
+		font-weight: 600;
+		margin-bottom: rem(20);
+	}
+
+
+	@include media-breakpoint-up(xl) {
+		.row{
+			--bs-gutter-x: 40px;
+		}
+	}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sGaranty

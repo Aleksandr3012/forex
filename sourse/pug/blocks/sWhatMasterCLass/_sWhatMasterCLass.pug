@@ -1,0 +1,13 @@
+mixin sWhatMasterCLass(data)
+	// start sWhatMasterCLass
+	+b.SECTION.sWhatMasterCLass.section#sWhatMasterCLass&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Что такое Мастер-группа
+			.row
+				mixin item(p)
+					+e.col.col-md!= p
+				+item(`Онлайн-встречи с&nbsp;автором 1&nbsp;раз в&nbsp;2&nbsp;недели на&nbsp;протяжении 3-х месяцев после тренинга. Занятия будут проходить по&nbsp;понедельникам в&nbsp;18:00&nbsp;МСК.`)
+				+item(`Разбор Ваших вопросов и&nbsp;сделок, исправление ошибок, совместный анализ рынка и&nbsp;рекомендации по&nbsp;торговле`)
+				+item(`Возможность в&nbsp;любое время задавать вопросы и&nbsp;получать на&nbsp;них ответы автора и&nbsp;куратора, не&nbsp;дожидаясь очередного онлайн-занятия`)
+	// end sWhatMasterCLass

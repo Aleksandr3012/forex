@@ -9,7 +9,10 @@
 		display: block;
 		margin-bottom: rem(44);
 		max-width: 1112px;
+	}
 
+	&__link {
+		
 	}
 
 	@include media-breakpoint-up(sm) {}

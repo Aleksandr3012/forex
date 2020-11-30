@@ -1,0 +1,136 @@
+// start .sQuestions
+.sQuestions {
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(38px)};
+		--sPB: #{rem(150)};
+		--sTPB: #{rem(49px)};
+	}
+
+	.container{
+		@include media-breakpoint-up(xl){
+			padding-left: 10px;
+		}
+	}
+
+
+	&__items{
+
+	}
+	&__item{
+		@include mt();
+		cursor: pointer;
+
+		box-shadow: 0px 4px 59px rgba(0, 0, 0, 0.09);
+		&:hover{
+			box-shadow: 0px 4px 59px rgba(0, 0, 0, 0.19);
+			filter: brightness(1.02);
+			@include media-breakpoint-up(xl){
+				&:not(.active){
+					transform: scale(1.02);
+					.sQuestions__circle{
+						transform: translateX(-10px) rotate(90deg);
+					}
+				}
+			}
+		}
+		border-radius: rem(30px);
+
+		margin-bottom: rem(22);
+		&.active{
+			margin-bottom: rem(36);
+
+			.sQuestions__circle{
+				&:after{
+					opacity: 0;
+				}
+			}
+
+
+
+		}
+	}
+	&__header{
+	padding: rem(17) rem(30);
+	@include rfs(24px);
+	color: #ffffff;
+	background: linear-gradient(90deg, #283048 0%, #859398 100%);
+	border-radius: 10px;
+	margin-bottom: rem(24);
+	padding-right: rem(50);
+	position: relative;
+	&::before{
+		content: '';
+		// position: relative;
+		position: absolute;
+		@include a-cent(y);
+		height: rem(21);
+		width: rem(11);
+		background-image: url(../img/svg/chevron-right.svg);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		right: rem(22);
+
+	}
+	}
+ 
+	&__content{
+		display: none;
+		background: #FFFFFF;
+		box-shadow: 0px 26px 46px rgba(170, 170, 170, 0.69);
+		border-radius: 10px;
+		padding: rem(17) rem(30);
+		&.active{
+			display: block;
+		}
+		
+
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+
+		p{
+			line-height: 1.7;
+
+			font-size: rem(18px);
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(lg){
+				font-size: rem(20px);
+				margin-bottom: 25px;
+			}
+
+			&.green{
+				color: $green;
+				font-weight: 500;
+			}
+		}
+		ul{
+			list-style: none;
+			padding: 0;
+
+			margin: 0 0 rem(20) 0;
+			@include media-breakpoint-up(lg){
+				margin: 0 0 25px 0;
+			}
+
+			li{ 
+				line-height: 1.7;
+
+				padding-left: rem(30px);
+				margin-bottom: rem(10px);
+				@include media-breakpoint-up(lg){
+					padding-left: 35px;
+					margin-bottom: 14px;
+				}
+
+				&:after{
+					background-color: $green;
+				}
+
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	&__{}
+} // end.sQuestions

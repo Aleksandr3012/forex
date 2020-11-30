@@ -4,11 +4,19 @@ extends layout/main.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sHowItWorks/_sHowItWorks.pug
+include ../blocks/sQuestions/_sQuestions.pug
 include ../blocks/sWhatYouGet/_sWhatYouGet.pug
 include ../blocks/sAdvantage/_sAdvantage.pug
 include ../blocks/sVideo/_sVideo.pug
 include ../blocks/sIndicators/_sIndicators.pug
 include ../blocks/sMonitoring/_sMonitoring.pug
+include ../blocks/sSchedule/_sSchedule.pug
+include ../blocks/sBonuses/_sBonuses.pug
+include ../blocks/sWhatMasterCLass/_sWhatMasterCLass.pug
+include ../blocks/sRews/_sRews.pug
+include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sGaranty/_sGaranty.pug
+include ../blocks/sGoldenLevel/_sGoldenLevel.pug
 
 block variables
 	- let  mainPage= null
@@ -31,7 +39,22 @@ block pagecontent
 	+sIndicators()
 	+sMonitoring()
 	+sForm()
-	+sContact()
+	+sSchedule
+	+sWhatMasterCLass
+	+regBlock({
+		t:`Изучите самую совершенную торговую систему кандидата экономических наук Николая Еремеева и&nbsp;отработайте её&nbsp;на&nbsp;практике вместе с&nbsp;автором!`,
+		 btn:`Записывайтесь, пока есть свободные места!`
+	})
+	+sBonuses
+	+regBlockPrice({
+		t:`Сколько стоит участие`,
+		 btn:`Оформите Ваш заказ`
+	})
+	+sRews
+	+sTeam
+	+sGaranty
+	+sGoldenLevel
+	+sQuestions
 	+regBlock({
 		t:`Мы&nbsp;продумали наш проект таким образом, чтобы каждый активный участник тренинга заработал деньги прямо во&nbsp;время обучения. Вам остаётся только воспользоваться этой возможностью.`,
 		 btn:`Регистрируйтесь на&nbsp;тренинг и&nbsp;зарабатывайте!`
