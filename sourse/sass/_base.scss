@@ -38,10 +38,6 @@ h1, .h1 {
 
 }
 
-h2, .h2 {
-	@extend .h1;
-}
-
 h5, .h5 {
 	line-height: 160%;
 }
@@ -130,6 +126,11 @@ body {
 
 .section-title {
 	padding-bottom: var(--sTPB);
+	h2,
+	.h2 {
+		@extend .h1;
+	}
+
 }
 
 
@@ -299,9 +300,9 @@ ul {
 	width: var(--swiperArrowSize);
 	height: var(--swiperArrowSize);
 	border-radius: 50%;
-	background-color: var(--swiperBgDef);
-	border: 2px solid var(--swiperBorderColorDef);
-	color: var(--swiperColorDef);
+	// background-color: var(--swiperBgDef);
+	// border: 2px solid var(--swiperBorderColorDef);
+	// color: var(--swiperColorDef);
 	@include bgs;
 	z-index: 300;
 	outline: none !important;
@@ -309,17 +310,17 @@ ul {
 	background-image: none;
 	margin: 0;
 	@include a-cent(y);
-	box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
+	// box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
 	@include mt;
 
 	&:hover {
-		background-color: var(--swiperBgDefHover);
-		border-color: var(--swiperBorderColorDefHover);
+		// background-color: var(--swiperBgDefHover);
+		// border-color: var(--swiperBorderColorDefHover);
 		color: var(--swiperColorDefHover);
 	}
 
 	.icon {
-		font-size: rem(12);
+		font-size: rem(72);
 	}
 
 	&::after {
@@ -345,19 +346,33 @@ ul {
 
 	&-bullet {
 		opacity: 1;
-		width: 8px;
-		height: 8px;
+		width: 1rem;
+		height: 1rem;
 		border-radius: 50%;
-		background-color: $secondary;
+		background: #FFFFFF;
+		border: 1px solid #D3D3D3;
 		outline: none !important;
 		@include mt;
 		margin-left: rem(8);
 		// padding-right: rem(8);
-		margin-right: rem(5);
+		margin-right: rem(9);
+		position: relative;
+		&::before{
+			content: '';
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background: linear-gradient(135deg, #5F3DC1 0%, #538F16 100%);
+			@include a-cent;
+			@include mt;
+			opacity: 0;
+		}
 
 		&-active,
-		&:hover {
-			background-color: $primary;
+		&:hover { 
+			&::before{
+				opacity: 1;
+			}
 		}
 	}
 }
@@ -490,8 +505,8 @@ iframe {
 		top: 0;
 		width: 100%;
 		height: 100%;
-		background-image: linear-gradient(180deg, lighten($color:#FFE600, $amount: 10) 0%,
-		lighten($color: #FFC700, $amount: 10) 100%);
+		background-image: linear-gradient(180deg, lighten($color:#FFE600, $amount: 15) 0%,
+		lighten($color: #FFC700, $amount: 15) 100%);
 		border-radius: 150px;
 		z-index: -1;
 		@include mt;

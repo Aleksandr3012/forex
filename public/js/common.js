@@ -288,17 +288,7 @@ function eventHandler() {
 			loadPrevNext: true
 		},
 		watchOverflow: true
-	}, _defineProperty(_defaultSl, "spaceBetween", 0), _defineProperty(_defaultSl, "loop", true), _defineProperty(_defaultSl, "navigation", {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev'
-	}), _defineProperty(_defaultSl, "pagination", {
-		el: ' .swiper-pagination',
-		type: 'bullets',
-		clickable: true // renderBullet: function (index, className) {
-		// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-		// }
-
-	}), _defaultSl);
+	}, _defineProperty(_defaultSl, "spaceBetween", 0), _defineProperty(_defaultSl, "loop", true), _defaultSl);
 	var swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 'auto',
 		freeMode: true,
@@ -306,6 +296,21 @@ function eventHandler() {
 		touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true
+	}));
+	var swiperRew = new Swiper('.sRews__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		slidesPerView: 1,
+		navigation: {
+			nextEl: '.sRews .swiper-button-next',
+			prevEl: '.sRews .swiper-button-prev'
+		},
+		pagination: {
+			el: '.sRews .swiper-pagination',
+			type: 'bullets',
+			clickable: true // renderBullet: function (index, className) {
+			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+			// }
+
+		}
 	})); //sQusetions js
 
 	$('.q-item-js').click(function () {

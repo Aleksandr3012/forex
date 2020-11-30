@@ -46,7 +46,15 @@
 		pointer-events: none;
 	 
 		content:   	url(../img/@2x/webp/regblock-bg.webp);
-		 top: -72px;
+		top: -72px;
+	}
+	&--price{
+		&::before{
+			top: auto;
+			bottom: rem(-5);
+			content: url(../img/@2x/webp/regbg-price.webp);
+
+		}
 	}
 	&__title{
 		@include rfs(30px);
@@ -56,5 +64,32 @@
 			margin-bottom: 0;
 		}
 		margin-bottom: 1rem;
+	}
+	ul{
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+	li{
+		margin-bottom: rem(20);
+		list-style: none;
+		span{
+			@extend .h5;
+			font-weight: 600;
+			margin-bottom: 0;
+			padding: rem(4) rem(8);
+			background: linear-gradient(90deg, #EC6F66 0%, #F3A183 100%);
+		}
+	}
+	&__price{
+		@extend .h2;
+		font-weight: 800;
+		background: linear-gradient(135deg, #FAFF00 0%, #7FC13D 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	&__price-old{
+		@extend .h5;
+		text-decoration-line: line-through;
+		margin-bottom: rem(40);
 	}
 }

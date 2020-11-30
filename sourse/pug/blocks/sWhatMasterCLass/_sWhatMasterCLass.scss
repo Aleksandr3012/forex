@@ -1,0 +1,26 @@
+
+	// start .sWhatMasterCLass
+.sWhatMasterCLass {
+ 
+	.row{
+		justify-content: space-around;
+	}
+	&__col{
+		max-width: rem(295);
+		text-align: center;
+		margin-bottom: rem(30);
+		&::before{
+			content: url(../img/svg/check-circle.svg);
+			display: block;
+			margin-bottom: rem(54);
+		}
+	}
+
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sWhatMasterCLass
