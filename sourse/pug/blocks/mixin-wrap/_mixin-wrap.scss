@@ -45,6 +45,9 @@
 		z-index: -1;
 		pointer-events: none;
 		display: block;
+		overflow: hidden;
+		width: 100%;
+		display: block;
 		img{
 
 			width: auto;
