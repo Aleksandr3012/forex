@@ -57,7 +57,7 @@ function eventHandler() {
 
 		})
 	})
-	let videoBtn = document.querySelector(".sVideo__video");
+	let videoBtn = document.querySelector(".sVideo__video:not(.active)");
 
 	videoBtn.addEventListener('click', function () {
 

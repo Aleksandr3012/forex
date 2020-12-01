@@ -72,7 +72,7 @@ function eventHandler() {
 			}
 		});
 	});
-	var videoBtn = document.querySelector(".sVideo__video");
+	var videoBtn = document.querySelector(".sVideo__video:not(.active)");
 	videoBtn.addEventListener('click', function () {
 		this.classList.add("active");
 		this.innerHTML += this.dataset.src;
