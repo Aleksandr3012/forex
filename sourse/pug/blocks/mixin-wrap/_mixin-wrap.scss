@@ -40,20 +40,23 @@
 	padding: rem(66) 0;
 	position: relative;
 	z-index: 2;
-	&::before{
+	picture{
 		position: absolute;
 		z-index: -1;
 		pointer-events: none;
-	 
-		content:   	url(../img/@2x/webp/regblock-bg.webp);
+		display: block;
+		img{
+
+			width: auto;
+			max-width: none;
+		}
+	  
 		top: -72px;
 	}
 	&--price{
-		&::before{
+		picture{
 			top: auto;
-			bottom: rem(-5);
-			content: url(../img/@2x/webp/regbg-price.webp);
-
+			bottom: rem(-5); 
 		}
 	}
 	&__title{

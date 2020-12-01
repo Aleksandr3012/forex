@@ -26,6 +26,7 @@ mixin btn(btn, href="#")
 		i
 mixin regBlock(data)
 	+b.regBlock&attributes(attributes)
+		+pic('regblock-bg.png','',0)
 		.container
 			.row.align-items-center
 				.col-xl-7
@@ -36,6 +37,7 @@ mixin regBlock(data)
 					+btn(data.btn)
 mixin regBlockPrice(data)
 	+b.regBlock--price
+		+pic('regbg-price.png','',0)
 		.container
 			.row
 				.col-xl-8.col-lg-7

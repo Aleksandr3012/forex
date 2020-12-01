@@ -19,31 +19,6 @@ var JSCCommon = {
 		if (isIE11) {
 			$("body").after('<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
 		}
-	},
-	heightwindow: function heightwindow() {
-		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-		var vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document
-
-		document.documentElement.style.setProperty('--vh', "".concat(vh, "px")); // We listen to the resize event
-
-		window.addEventListener('resize', function () {
-			// We execute the same script as before
-			var vh = window.innerHeight * 0.01;
-			document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
-		}, {
-			passive: true
-		});
-	},
-	animateScroll: function animateScroll() {
-		// листалка по стр
-		$(" .top-nav li a, .scroll-link").click(function () {
-			var elementClick = $(this).attr("href");
-			var destination = $(elementClick).offset().top;
-			$('html, body').animate({
-				scrollTop: destination
-			}, 1100);
-			return false;
-		});
 	}
 };
 var $ = jQuery;
@@ -51,14 +26,7 @@ var $ = jQuery;
 function eventHandler() {
 	var _defaultSl;
 
-	JSCCommon.ifie(); // JSCCommon.modalCall();
-	// JSCCommon.tabscostume('tabs');
-	// JSCCommon.mobileMenu();
-	// JSCCommon.inputMask();
-	// JSCCommon.sendForm();
-
-	JSCCommon.heightwindow();
-	JSCCommon.animateScroll();
+	JSCCommon.ifie();
 	var defaultSl = (_defaultSl = {
 		spaceBetween: 0,
 		lazy: {

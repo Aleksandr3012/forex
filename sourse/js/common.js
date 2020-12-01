@@ -9,44 +9,11 @@ const JSCCommon = {
 		}
 	},
 
-	heightwindow() {
-		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-		let vh = window.innerHeight * 0.01;
-		// Then we set the value in the --vh custom property to the root of the document
-		document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-		// We listen to the resize event
-		window.addEventListener('resize', () => {
-			// We execute the same script as before
-			let vh = window.innerHeight * 0.01;
-			document.documentElement.style.setProperty('--vh', `${vh}px`);
-		}, { passive: true });
-	},
-	animateScroll() {
-		// листалка по стр
-		$(" .top-nav li a, .scroll-link").click(function () {
-			const elementClick = $(this).attr("href");
-			const destination = $(elementClick).offset().top;
-
-			$('html, body').animate({ scrollTop: destination }, 1100);
-
-			return false;
-		});
-	}
 };
 const $ = jQuery;
 
 function eventHandler() {
 	JSCCommon.ifie();
-	// JSCCommon.modalCall();
-	// JSCCommon.tabscostume('tabs');
-	// JSCCommon.mobileMenu();
-	// JSCCommon.inputMask();
-	// JSCCommon.sendForm();
-	JSCCommon.heightwindow();
-	JSCCommon.animateScroll();
-
-
 	let defaultSl = {
 		spaceBetween: 0,
 		lazy: {
