@@ -1,0 +1,11 @@
+mixin sVideo(data)
+	// start sVideo
+	+b.SECTION.sVideo.section#sVideo&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Посмотрите видео от Николая о новой торговой системе 5.0:
+				
+			+e.video(href='https://vimeo.com/482978316' data-fancybox="video")
+				+pic('video-img.jpg','','')(class="picture-bg")
+				+icon('play')
+	// end sVideo

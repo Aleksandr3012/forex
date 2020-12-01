@@ -6,6 +6,10 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sHowItWorks/_sHowItWorks.pug
 include ../blocks/sQuestions/_sQuestions.pug
 include ../blocks/sWhatYouGet/_sWhatYouGet.pug
+include ../blocks/sAdvantage/_sAdvantage.pug
+include ../blocks/sVideo/_sVideo.pug
+include ../blocks/sIndicators/_sIndicators.pug
+include ../blocks/sMonitoring/_sMonitoring.pug
 include ../blocks/sSchedule/_sSchedule.pug
 include ../blocks/sBonuses/_sBonuses.pug
 include ../blocks/sWhatMasterCLass/_sWhatMasterCLass.pug
@@ -13,6 +17,9 @@ include ../blocks/sRews/_sRews.pug
 include ../blocks/sTeam/_sTeam.pug
 include ../blocks/sGaranty/_sGaranty.pug
 include ../blocks/sGoldenLevel/_sGoldenLevel.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sCertificates/_sCertificates.pug
+include ../blocks/sNikolayTaught/_sNikolayTaught.pug
 
 block variables
 	- let  mainPage= null
@@ -25,8 +32,23 @@ block pagecontent
 		+topLine() 
 		+headerBlock()
 	+sHowItWorks()
+	+regBlock({
+		t:`Готовы уже сейчас записаться&nbsp;на&nbsp;обучение?`,
+		 btn:`Кликайте и регистрируйтесь!`
+	}).regBlock-sm
 	+sWhatYouGet()
-	+sForm()
+	+sAdvantage()
+	+sVideo()
+	+sIndicators()
+	+sMonitoring()
+	+regBlock({
+		t:`Хотите получать такие же&nbsp;результаты?`,
+		 btn:`Успевайте занять место в группе&nbsp;тренинга!`
+	}).regBlock-sm
+	+sAbout()
+	+sCertificates()
+	+sNikolayTaught()
+	+sRews-sm
 	+sSchedule
 	+sWhatMasterCLass
 	+regBlock({
