@@ -19,13 +19,14 @@
 	}
 
 	&__video {
+		cursor: pointer;
 		position: relative;
 		@include block(728,435);
 		max-width: rem(728);
 		margin-left: auto;
 		margin-right: auto;
 
-		img {
+		img, iframe {
 			@include a-cent;
 			width: 100%;
 			height: 100%;

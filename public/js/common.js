@@ -326,6 +326,9 @@ function eventHandler() {
 			_iterator.f();
 		}
 	});
+	$(".sVideo__video").on('click', function () {
+		$(this).addClass("active").html($(this).data("src"));
+	});
 }
 
 ;

@@ -331,6 +331,10 @@ function eventHandler() {
 
 	});
 
+	$(".sVideo__video").on('click', function () {
+		$(this).addClass("active").html($(this).data("src"));
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
