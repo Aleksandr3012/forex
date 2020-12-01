@@ -1,18 +1,43 @@
 
 	// start .sMonitoring
 .sMonitoring {
-	
+	padding-top: calc(var(--sPT) / 2.5);
+	padding-bottom: calc(var(--sPB) * 2.19);
+
+	.section-title {
+		max-width: rem(950);
+		padding-bottom: calc(var(--sTPB) * 1.25);
+	}
 
 	&__imgWrap {
 		box-shadow: 0px 4px 150px rgba(0, 0, 0, 0.25);
 		padding: rem(60) rem(112);
 		display: block;
-		margin-bottom: rem(44);
+		margin-bottom: rem(47);
 		max-width: 1112px;
 	}
 
 	&__link {
-		
+		font-weight: 600;
+		position: relative;
+		@include rfs(24px);
+
+
+		&:hover {
+			&::before {
+				width: 0;
+			}
+		}
+
+		&::before {
+			content: '';
+			@include mt(.5);
+			width: 100%;
+			height: 2px;
+			background: linear-gradient(135deg, #5F3DC1 0%, #538F16 100%);
+			position: absolute;
+			bottom: -2px;
+		}
 	}
 
 	@include media-breakpoint-up(sm) {}

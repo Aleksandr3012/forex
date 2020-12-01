@@ -1,0 +1,117 @@
+
+	// start .sNikolayTaught
+.sNikolayTaught {
+	padding-top: calc(var(--sPT) / 7);
+	padding-bottom: calc(var(--sPB) / 6);
+
+	.section-title {
+		@include media-breakpoint-up(lg) {
+			margin-top: rem(-8);
+		}
+	}
+
+
+	&__row {
+		@include media-breakpoint-up(xl) {
+			// @include roww(60px);
+		}
+		padding-bottom: rem(27);
+	}
+
+	&__topLine {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&__imgWrap {
+		margin-top: rem(-32);
+		// @include block(144,144);
+		// margin-right: 43px;
+		// flex-shrink: 0;
+		max-width: 144px;
+
+		// img {
+		// 	@include a-cent;
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	object-fit: cover;
+		// }
+	}
+
+	&__name {
+		@include rfs(30px);
+		@extend .text-gradient;
+		font-weight: 800;
+	}
+	
+	&__status {
+		@include rfs(24px);
+		color: #5C5C5C;
+		font-weight: 600;
+	}
+
+	&__apprenticeRow {
+		padding-bottom: rem(30);
+		@include roww(15px);
+		@include media-breakpoint-up(lg) {
+			@include roww(43px);
+		}
+	}
+
+	&__apprenticeWrap {
+		position: relative;
+		box-shadow: 0px 4px 150px rgba(0, 0, 0, 0.25);
+		background: #FFFFFF;
+		padding: 0 rem(20) rem(15) rem(20);
+		@include media-breakpoint-up(sm) {
+			padding: 0 rem(62) rem(15) rem(48);
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			right: 5px;
+			height: 24px;
+			width: 31px;
+			top: -15px;
+
+			@include media-breakpoint-up(sm) {
+				right: 37px;
+				height: 47px;
+				width: 62px;
+				top: -25px;
+			}
+			background-image: url('../img/svg/quotes.svg');
+			background-repeat: no-repeat;
+			background-size: 100%;
+		}
+	}
+
+	h5 {
+		margin-bottom: rem(15);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(32);
+		}
+		line-height: 1.65;
+	}
+
+	p {
+		@include rfs(20px);
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(37);
+		}
+	}
+
+
+
+
+
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sNikolayTaught

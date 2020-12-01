@@ -17,6 +17,9 @@ include ../blocks/sRews/_sRews.pug
 include ../blocks/sTeam/_sTeam.pug
 include ../blocks/sGaranty/_sGaranty.pug
 include ../blocks/sGoldenLevel/_sGoldenLevel.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sCertificates/_sCertificates.pug
+include ../blocks/sNikolayTaught/_sNikolayTaught.pug
 
 block variables
 	- let  mainPage= null
@@ -38,7 +41,14 @@ block pagecontent
 	+sVideo()
 	+sIndicators()
 	+sMonitoring()
-	+sForm()
+	+regBlock({
+		t:`Хотите получать такие же&nbsp;результаты?`,
+		 btn:`Успевайте занять место в группе&nbsp;тренинга!`
+	}).regBlock-sm
+	+sAbout()
+	+sCertificates()
+	+sNikolayTaught()
+	+sRews-sm
 	+sSchedule
 	+sWhatMasterCLass
 	+regBlock({

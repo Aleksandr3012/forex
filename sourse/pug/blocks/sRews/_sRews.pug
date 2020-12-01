@@ -22,9 +22,22 @@ mixin sRews(data)
 			+e.more
 				.row
 					.col-lg-6
-						a(href="'https://smartforex.info-dvd.ru/testimonials/index.html" target="_blank")
+						a(href="https://smartforex.info-dvd.ru/testimonials/index.html" target="_blank")
 							+pic("more.jpg",'',0)
 					+e.col.col-lg-6
 						+e.text Смотрите сотни реальных восторженных отзывов, видео и&nbsp;интервью с&nbsp;теми, кто уже зарабатывает!
 						+btn('Смотреть все отзывы','https://smartforex.info-dvd.ru/testimonials/index.html')
 	// end sRews
+
+mixin sRews-sm(data)
+	// start sRews
+	+b.sRews--sm.section&attributes(attributes)
+		.container
+			+e.more
+				.row
+					.col-lg-6
+						a(href="https://smartforex.info-dvd.ru/testimonials/index.html" target="_blank")
+							+pic("more.jpg",'',0)
+					+e.col.col-lg-6
+						+e.text Смотрите сотни реальных восторженных отзывов, видео и&nbsp;интервью с&nbsp;теми, кто уже зарабатывает!
+						+btn('Смотреть все отзывы','https://smartforex.info-dvd.ru/testimonials/index.html')
