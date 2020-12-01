@@ -12,10 +12,9 @@ mixin pic(i, bg,  media='576px')
 			const data = (ifLazy ?  url  : null)
 
 		if source
-			source( srcset=url   type=`image/${exp}`   )&attributes(attributes)
+			source(type=`image/${exp}` srcset=url)
 		else
-			noscript(class="loading-lazy")
-				img(src=url loading='lazy'  class=(bg=="bg" ? "object-fit-js": null ) alt="")&attributes(attributes)
+			img(class=(bg=="bg" ? "object-fit-js": null ) src=url alt="" loading='lazy')
 	
 	// picture
 	
@@ -46,9 +45,9 @@ mixin pic2({i, bg, lazy="lazy", media='576px'})
 			const data = (ifLazy ?  url  : null)
 
 		if source
-			source( srcset=src data-srcset= data  type=`image/${exp}`   )&attributes(attributes)
+			source(data-srcset=data type=`image/${exp}` srcset=src)
 		else
-			img(src=src data-src=data, class=(bg=="bg" ? "object-fit-js": null ) alt="")&attributes(attributes)
+			img(class=(bg=="bg" ? "object-fit-js": null ), data-src=data, src=src, alt="")
 	
 	// picture
 	picture( class= lazy)&attributes(attributes) 
