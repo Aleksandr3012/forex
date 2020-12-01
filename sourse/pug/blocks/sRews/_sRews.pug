@@ -11,7 +11,7 @@ mixin sRews(data)
 					.swiper-wrapper
 						- for (var x = 1; x < 7; x++)
 							+e.slide.swiper-slide
-								a.sTopSlider__img-cont(data-fancybox='topSliderImgs' href=`img/@2x/2-${x}.png`)
+								a.sTopSlider__img-cont(data-fslightbox='topSliderImgs' href=`img/@2x/2-${x}.png`)
 									picture.sTopSlider__img
 										source.swiper-lazy(data-srcset=`img/@2x/webp/2-${x}.webp` type='image/webp' srcset='#' media="(min-width:576px)")
 										source.swiper-lazy(data-srcset=`img/@1x/webp/2-${x}.webp` type='image/webp' srcset='#')

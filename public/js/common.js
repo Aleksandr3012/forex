@@ -15,13 +15,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var JSCCommon = {
 	ifie: function ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-
-		if (isIE11) {
-			$("body").after('<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
-		}
+		if (isIE11) document.body.innerHTML += '<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>';
 	}
 };
-var $ = jQuery;
 
 function eventHandler() {
 	var _defaultSl;
@@ -43,42 +39,43 @@ function eventHandler() {
 		pagination: {
 			el: '.sRews .swiper-pagination',
 			type: 'bullets',
-			clickable: true // renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
-
+			clickable: true
 		}
 	})); //sQusetions js
 
-	$('.q-item-js').click(function () {
-		var allItems = document.querySelectorAll('.q-item-js');
-		var self = this;
+	var qItem = document.querySelectorAll(".q-item-js");
+	qItem.forEach(function (el) {
+		el.addEventListener('click', function () {
+			var allItems = document.querySelectorAll('.q-item-js');
+			var self = this;
 
-		var _iterator = _createForOfIteratorHelper(allItems),
-				_step;
+			var _iterator = _createForOfIteratorHelper(allItems),
+					_step;
 
-		try {
-			for (_iterator.s(); !(_step = _iterator.n()).done;) {
-				var item = _step.value;
-				var currContent = item.querySelector('.q-content-js');
+			try {
+				for (_iterator.s(); !(_step = _iterator.n()).done;) {
+					var item = _step.value;
+					var currContent = item.querySelector('.q-content-js');
 
-				if (item === self) {
-					$(item).toggleClass('active');
-					$(currContent).slideToggle(function () {
-						$(this).toggleClass('active');
-					});
-				} else {
-					$(item).removeClass('active');
-					$(currContent).slideUp(function () {
-						$(this).removeClass('active');
-					});
+					if (item === self) {
+						item.classList.toggle('active');
+						currContent.classList.toggle('active');
+					} else {
+						item.classList.remove('active');
+						currContent.classList.remove('active');
+					}
 				}
+			} catch (err) {
+				_iterator.e(err);
+			} finally {
+				_iterator.f();
 			}
-		} catch (err) {
-			_iterator.e(err);
-		} finally {
-			_iterator.f();
-		}
+		});
+	});
+	var videoBtn = document.querySelector(".sVideo__video");
+	videoBtn.addEventListener('click', function () {
+		this.classList.add("active");
+		this.innerHTML += this.dataset.src;
 	});
 }
 

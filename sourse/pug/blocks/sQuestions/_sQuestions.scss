@@ -75,12 +75,19 @@
  
 	&__content{
 		display: none;
+		visibility: hidden;
+		opacity: 0;
+		transition: 0.6s;
+		transform: translate(0, -100%);
 		background: #FFFFFF;
 		box-shadow: 0px 26px 46px rgba(170, 170, 170, 0.69);
 		border-radius: 10px;
 		padding: rem(17) rem(30);
 		&.active{
 			display: block;
+			visibility: visible;
+			opacity: 1;
+			transform: translate(0);
 		}
 		
 

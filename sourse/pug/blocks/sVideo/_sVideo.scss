@@ -4,7 +4,7 @@
 	position: relative;
 	padding-top: calc(var(--sPT) / 3);
 
-	&::before {
+	.bg {
 		content: url(../img/@2x/webp/video-bg.webp);
 		position: absolute;
 		top: 0;
@@ -19,13 +19,15 @@
 	}
 
 	&__video {
+		cursor: pointer;
 		position: relative;
 		@include block(728,435);
 		max-width: rem(728);
 		margin-left: auto;
 		margin-right: auto;
-
-		img {
+		
+		img, iframe {
+			background: #000;
 			@include a-cent;
 			width: 100%;
 			height: 100%;

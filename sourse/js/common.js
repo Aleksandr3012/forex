@@ -3,15 +3,10 @@ const JSCCommon = {
 
 	ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-		if (isIE11) {
-			$("body").after('<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>')
-
-		}
+		if (isIE11) document.body.innerHTML += '<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>'
 	},
 
 };
-const $ = jQuery;
-
 function eventHandler() {
 	JSCCommon.ifie();
 	let defaultSl = {
@@ -24,8 +19,6 @@ function eventHandler() {
 		loop: true,
 
 	}
-
-
 	const swiperRew = new Swiper('.sRews__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,
@@ -38,36 +31,39 @@ function eventHandler() {
 			el: '.sRews .swiper-pagination',
 			type: 'bullets',
 			clickable: true,
-			// renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
 		},
 	});
 
 	//sQusetions js
-	$('.q-item-js').click(function () {
-		let allItems = document.querySelectorAll('.q-item-js');
-		let self = this;
+	let qItem = document.querySelectorAll(".q-item-js");
+	qItem.forEach(function (el) {
+		el.addEventListener('click', function () {
+			let allItems = document.querySelectorAll('.q-item-js');
+			let self = this;
 
-		for (let item of allItems) {
-			let currContent = item.querySelector('.q-content-js');
+			for (let item of allItems) {
+				let currContent = item.querySelector('.q-content-js');
 
-			if (item === self) {
-				$(item).toggleClass('active');
-				$(currContent).slideToggle(function () {
-					$(this).toggleClass('active');
-				});
+				if (item === self) {
+					item.classList.toggle('active');
+					currContent.classList.toggle('active');
+				}
+				else {
+					item.classList.remove('active');
+					currContent.classList.remove('active');
+				}
+
 			}
-			else {
-				$(item).removeClass('active');
-				$(currContent).slideUp(function () {
-					$(this).removeClass('active');
-				});
-			}
 
-		}
+		})
+	})
+	let videoBtn = document.querySelector(".sVideo__video");
 
-	});
+	videoBtn.addEventListener('click', function () {
+
+		this.classList.add("active");
+		this.innerHTML += this.dataset.src;
+	})
 
 };
 if (document.readyState !== 'loading') {

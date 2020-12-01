@@ -4,8 +4,7 @@
 	--sPB: #{rem(0)};
 	position: relative;
 	z-index: 2;
-	&::before{
-		content:  url(../img/@2x/webp/sSchedule-bg.webp);
+	.bg{ 
 		position: absolute;
 		right: 100px;
 		top: rem(200);

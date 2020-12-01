@@ -17,11 +17,8 @@
 		<meta property="og:locale" content="ru_RU">
 		<meta property="og:image" content="path/to/image.jpg">
 		<meta property="og:image:width" content="968">
-		<meta property="og:image:height" content="504"><link type="font/woff2" href="fonts/Inter-Regular.woff2" rel="preload" as="font" crossorigin="anonymous">
-<link type="font/woff2" href="fonts/Inter-Medium.woff2" rel="preload" as="font" crossorigin="anonymous">
-<link type="font/woff2" href="fonts/Inter-SemiBold.woff2" rel="preload" as="font" crossorigin="anonymous">
-<link type="font/woff2" href="fonts/Inter-Bold.woff2" rel="preload" as="font" crossorigin="anonymous">
-<link type="font/woff2" href="fonts/Inter-ExtraBold.woff2" rel="preload" as="font" crossorigin="anonymous">
+		<meta property="og:image:height" content="504"><link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;800&display=swap" rel="stylesheet">
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
 	</head>
@@ -266,18 +263,28 @@
 			<!-- end sAdvantage-->
 			<!-- start sVideo-->
 			<section class="sVideo section" id="sVideo">
+				<!-- picture-->
+				<picture class="bg"> 
+					<source type="image/webp" srcset="img/@2x/webp/video-bg.webp"/>
+					<source type="image/webp" srcset="img/@1x/webp/video-bg.webp"/>
+					<source type="image/png" srcset="img/@2x/video-bg.png"/>
+					<source type="image/png" srcset="img/@1x/video-bg.png"/><img src="img/@2x/video-bg.png" alt="" loading="lazy"/>
+				</picture>
+				<!-- /picture-->
 				<div class="container">
 					<div class="section-title">
 						<h2>Посмотрите видео от Николая о новой торговой системе 5.0:</h2>
-					</div><a class="sVideo__video" href="https://vimeo.com/482978316" data-fancybox="video">
-					<!-- picture-->
-					<picture class="picture-bg"> 
-						<source type="image/webp" srcset="img/@2x/webp/video-img.webp"/><img src="img/@2x/video-img.jpg" alt="" loading="lazy"/>
-					</picture>
-					<!-- /picture-->
-					<svg class="icon icon-play ">
-						<use xlink:href="img/svg/sprite.svg#play"></use>
-					</svg></a>
+					</div>
+					<div class="sVideo__video" data-src="&lt;iframe src=&quot;https://player.vimeo.com/video/482978316?autoplay=1&amp;loop=1&amp;autopause=0&quot; loading=&quot;lazy&quot; width=&quot;800&quot; height=&quot;450&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen&gt;&lt;/iframe&gt;">
+						<!-- picture-->
+						<picture class="picture-bg"> 
+							<source type="image/webp" srcset="img/@2x/webp/video-img.webp"/><img src="img/@2x/video-img.jpg" alt="" loading="lazy"/>
+						</picture>
+						<!-- /picture-->
+						<svg class="icon icon-play ">
+							<use xlink:href="img/svg/sprite.svg#play"></use>
+						</svg>
+					</div>
 				</div>
 			</section>
 			<!-- end sVideo-->
@@ -347,7 +354,7 @@
 				<div class="container">
 					<div class="section-title">
 						<h2>А это мониторинг реального счёта, где автор ведёт торговлю по этой системе:</h2>
-					</div><a class="sMonitoring__imgWrap" href="img/@2x/monitoring.png" data-fancybox="monitoring">
+					</div><a class="sMonitoring__imgWrap" data-fslightbox="monitoring" href="img/@2x/monitoring.png">
 					<!-- picture-->
 					<picture> 
 						<source type="image/webp" srcset="img/@2x/webp/monitoring.webp"/><img src="img/@2x/monitoring.png" alt="" loading="lazy"/>
@@ -383,7 +390,7 @@
 							<div class="section-title">
 								<h2>Кто&nbsp;же такой Николай Еремеев и&nbsp;почему его&nbsp;торговая система восхищает своей прибыльностью?</h2>
 							</div>
-							<div class="sAbout__imgWrap">
+							<div class="sAbout__imgWrap d-none d-md-block">
 								<!-- picture-->
 								<picture> 
 									<source type="image/webp" srcset="img/@2x/webp/about.webp"/>
@@ -416,44 +423,47 @@
 						<div class="col-md">
 							<div class="section-title">
 								<h2>Все компетенции автора подтверждены документально</h2>
-							</div><a href="img/@2x/certificat-1.jpg" data-fancybox="certificate">
+							</div><a data-fslightbox="certificate" href="img/@2x/certificat-1.jpg">
 								<!-- picture-->
 								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/certificat-1.webp"/><img src="img/@2x/certificat-1.jpg" alt="" loading="lazy"/>
+									<source type="image/webp" srcset="img/@2x/webp/certificat-1.webp"/>
+									<source type="image/webp" srcset="img/@1x/webp/certificat-1.webp"/>
+									<source type="image/jpg" srcset="img/@2x/certificat-1.jpg"/>
+									<source type="image/jpg" srcset="img/@1x/certificat-1.jpg"/><img src="img/@2x/certificat-1.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture--></a>
 						</div>
-						<div class="sCertificates__rcol col"><a href="img/@2x/certificat-2.jpg" data-fancybox="certificate">
+						<div class="sCertificates__rcol col"><a data-fslightbox="certificate" href="img/@2x/certificat-2.jpg">
 								<!-- picture-->
 								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/certificat-2.webp"/><img src="img/@2x/certificat-2.jpg" alt="" loading="lazy"/>
+									<source type="image/webp" srcset="img/@2x/webp/certificat-2-sm.webp"/><img src="img/@2x/certificat-2-sm.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture--></a>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-6"><a href="img/@2x/certificat-3.jpg" data-fancybox="certificate">
+						<div class="col-md-6"><a data-fslightbox="certificate" href="img/@2x/certificat-3.jpg">
 								<!-- picture-->
 								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/certificat-3.webp"/><img src="img/@2x/certificat-3.jpg" alt="" loading="lazy"/>
+									<source type="image/webp" srcset="img/@2x/webp/certificat-3-sm.webp"/><img src="img/@2x/certificat-3-sm.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture--></a></div>
-						<div class="col-md-6"><a href="img/@2x/certificat-4.jpg" data-fancybox="certificate">
+						<div class="col-md-6"><a data-fslightbox="certificate" href="img/@2x/certificat-4.jpg">
 								<!-- picture-->
 								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/certificat-4.webp"/><img src="img/@2x/certificat-4.jpg" alt="" loading="lazy"/>
+									<source type="image/webp" srcset="img/@2x/webp/certificat-4-sm.webp"/><img src="img/@2x/certificat-4-sm.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture--></a></div>
-						<div class="col-md-6"><a href="img/@2x/certificat-5.jpg" data-fancybox="certificate">
+						<div class="col-md-6"><a data-fslightbox="certificate" href="img/@2x/certificat-5.jpg">
 								<!-- picture-->
 								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/certificat-5.webp"/><img src="img/@2x/certificat-5.jpg" alt="" loading="lazy"/>
+									<source type="image/webp" srcset="img/@2x/webp/certificat-5-sm.webp"/><img src="img/@2x/certificat-5-sm.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture--></a></div>
-						<div class="col-md-6"><a href="img/@2x/certificat-6.jpg" data-fancybox="certificate">
+						<div class="col-md-6"><a data-fslightbox="certificate" href="img/@2x/certificat-6.jpg">
 								<!-- picture-->
 								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/certificat-6.webp"/><img src="img/@2x/certificat-6.jpg" alt="" loading="lazy"/>
+									<source type="image/webp" srcset="img/@2x/webp/certificat-6-sm.webp"/><img src="img/@2x/certificat-6-sm.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture--></a></div>
 					</div>
@@ -523,6 +533,14 @@
 			</div>
 			<!-- start sSchedule-->
 			<section class="sSchedule section" id="sSchedule">
+				<!-- picture-->
+				<picture class="bg"> 
+					<source type="image/webp" srcset="img/@2x/webp/sSchedule-bg.webp"/>
+					<source type="image/webp" srcset="img/@1x/webp/sSchedule-bg.webp"/>
+					<source type="image/png" srcset="img/@2x/sSchedule-bg.png"/>
+					<source type="image/png" srcset="img/@1x/sSchedule-bg.png"/><img src="img/@2x/sSchedule-bg.png" alt="" loading="lazy"/>
+				</picture>
+				<!-- /picture-->
 				<div class="container">
 					<div class="section-title">
 						<h2>Как будет проходить тренинг:</h2>
@@ -735,42 +753,42 @@
 						</div>
 						<div class="sRews__slider sRews__slider--js swiper-container">
 							<div class="swiper-wrapper">
-								<div class="sRews__slide swiper-slide"><a class="sTopSlider__img-cont" data-fancybox="topSliderImgs" href="img/@2x/2-1.png">
+								<div class="sRews__slide swiper-slide"><a class="sTopSlider__img-cont" data-fslightbox="topSliderImgs" href="img/@2x/2-1.png">
 										<picture class="sTopSlider__img">
 											<source class="swiper-lazy" data-srcset="img/@2x/webp/2-1.webp" type="image/webp" srcset="#" media="(min-width:576px)"/>
 											<source class="swiper-lazy" data-srcset="img/@1x/webp/2-1.webp" type="image/webp" srcset="#"/>
 											<source class="swiper-lazy" data-srcset="img/@2x/2-1.png" type="image/webp" srcset="#" media="(min-width:576px)"/><img class="swiper-lazy" data-src="img/@1x/2-1.png" src="#" alt=""/>
 										</picture></a>
 								</div>
-								<div class="sRews__slide swiper-slide"><a class="sTopSlider__img-cont" data-fancybox="topSliderImgs" href="img/@2x/2-2.png">
+								<div class="sRews__slide swiper-slide"><a class="sTopSlider__img-cont" data-fslightbox="topSliderImgs" href="img/@2x/2-2.png">
 										<picture class="sTopSlider__img">
 											<source class="swiper-lazy" data-srcset="img/@2x/webp/2-2.webp" type="image/webp" srcset="#" media="(min-width:576px)"/>
 											<source class="swiper-lazy" data-srcset="img/@1x/webp/2-2.webp" type="image/webp" srcset="#"/>
 											<source class="swiper-lazy" data-srcset="img/@2x/2-2.png" type="image/webp" srcset="#" media="(min-width:576px)"/><img class="swiper-lazy" data-src="img/@1x/2-2.png" src="#" alt=""/>
 										</picture></a>
 								</div>
-								<div class="sRews__slide swiper-slide"><a class="sTopSlider__img-cont" data-fancybox="topSliderImgs" href="img/@2x/2-3.png">
+								<div class="sRews__slide swiper-slide"><a class="sTopSlider__img-cont" data-fslightbox="topSliderImgs" href="img/@2x/2-3.png">
 										<picture class="sTopSlider__img">
 											<source class="swiper-lazy" data-srcset="img/@2x/webp/2-3.webp" type="image/webp" srcset="#" media="(min-width:576px)"/>
 											<source class="swiper-lazy" data-srcset="img/@1x/webp/2-3.webp" type="image/webp" srcset="#"/>
 											<source class="swiper-lazy" data-srcset="img/@2x/2-3.png" type="image/webp" srcset="#" media="(min-width:576px)"/><img class="swiper-lazy" data-src="img/@1x/2-3.png" src="#" alt=""/>
 										</picture></a>
 								</div>
-								<div class="sRews__slide swiper-slide"><a class="sTopSlider__img-cont" data-fancybox="topSliderImgs" href="img/@2x/2-4.png">
+								<div class="sRews__slide swiper-slide"><a class="sTopSlider__img-cont" data-fslightbox="topSliderImgs" href="img/@2x/2-4.png">
 										<picture class="sTopSlider__img">
 											<source class="swiper-lazy" data-srcset="img/@2x/webp/2-4.webp" type="image/webp" srcset="#" media="(min-width:576px)"/>
 											<source class="swiper-lazy" data-srcset="img/@1x/webp/2-4.webp" type="image/webp" srcset="#"/>
 											<source class="swiper-lazy" data-srcset="img/@2x/2-4.png" type="image/webp" srcset="#" media="(min-width:576px)"/><img class="swiper-lazy" data-src="img/@1x/2-4.png" src="#" alt=""/>
 										</picture></a>
 								</div>
-								<div class="sRews__slide swiper-slide"><a class="sTopSlider__img-cont" data-fancybox="topSliderImgs" href="img/@2x/2-5.png">
+								<div class="sRews__slide swiper-slide"><a class="sTopSlider__img-cont" data-fslightbox="topSliderImgs" href="img/@2x/2-5.png">
 										<picture class="sTopSlider__img">
 											<source class="swiper-lazy" data-srcset="img/@2x/webp/2-5.webp" type="image/webp" srcset="#" media="(min-width:576px)"/>
 											<source class="swiper-lazy" data-srcset="img/@1x/webp/2-5.webp" type="image/webp" srcset="#"/>
 											<source class="swiper-lazy" data-srcset="img/@2x/2-5.png" type="image/webp" srcset="#" media="(min-width:576px)"/><img class="swiper-lazy" data-src="img/@1x/2-5.png" src="#" alt=""/>
 										</picture></a>
 								</div>
-								<div class="sRews__slide swiper-slide"><a class="sTopSlider__img-cont" data-fancybox="topSliderImgs" href="img/@2x/2-6.png">
+								<div class="sRews__slide swiper-slide"><a class="sTopSlider__img-cont" data-fslightbox="topSliderImgs" href="img/@2x/2-6.png">
 										<picture class="sTopSlider__img">
 											<source class="swiper-lazy" data-srcset="img/@2x/webp/2-6.webp" type="image/webp" srcset="#" media="(min-width:576px)"/>
 											<source class="swiper-lazy" data-srcset="img/@1x/webp/2-6.webp" type="image/webp" srcset="#"/>
@@ -1080,9 +1098,7 @@
 			</footer>
 		</div>
 		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
-		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
-		<script src="libs/jquery/jquery.min.js"></script>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -1120,9 +1136,9 @@
 		<noscript><img src="https://www.facebook.com/tr?id=363478241622885&amp;ev=PageView&amp;noscript=1" height="1" width="1" style="display:none"/></noscript>
 		<!-- End Facebook Pixel Code-->
 		<!-- modal libs-->
-		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 		<!-- modal libs-->
 		<!-- slider libs-->
+		<script src="libs/fslightbox/index.js"></script>
 		<script src="libs/swiper/js/swiper.min.js"></script>
 		<!-- /slider libs-->
 		<script src="js/common.js"></script>
