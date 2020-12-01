@@ -24,8 +24,23 @@
 		}
 	}
 
+	
+	a {
+		display: block;
+		margin-bottom: rem(15);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(20);
+		}
+	}
+
 	&__row {
-		@include roww(24px)
+		@include roww(24px);
+
+		a {
+			@include media-breakpoint-up(md) {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	&__col {
@@ -37,14 +52,6 @@
 	&__rcol {
 		@include media-breakpoint-up(md) {
 			max-width: 36%;
-		}
-	}
-
-	a {
-		display: block;
-		margin-bottom: rem(15);
-		@include media-breakpoint-up(md) {
-			margin-bottom: rem(34);
 		}
 	}
 
