@@ -29,9 +29,15 @@
 		img, iframe {
 			background: #000;
 			@include a-cent;
+			z-index: 1;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+		}
+
+		&::before {
+			opacity: 0.5;
+			background: #000;
 		}
 
 		&:hover {
@@ -43,6 +49,7 @@
 
 	.icon {
 		@include a-cent;
+		z-index: 2;
 		font-size: rem(77);
 		color: #fff;
 		@include mt;
