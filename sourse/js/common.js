@@ -1,4 +1,3 @@
-
 const JSCCommon = {
 
 
@@ -65,6 +64,8 @@ function eventHandler() {
 		this.classList.add("active");
 		this.innerHTML += this.dataset.src;
 	})
+
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
@@ -72,10 +73,10 @@ if (document.readyState !== 'loading') {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
 
-// window.onload = function () {
-// 	document.body.classList.add('loaded_hiding');
-// 	window.setTimeout(function () {
-// 		document.body.classList.add('loaded');
-// 		document.body.classList.remove('loaded_hiding');
-// 	}, 100);
-// }
+window.onload = function () {
+	document.body.classList.add('loaded_hiding');
+	window.setTimeout(function () {
+		document.body.classList.add('loaded');
+		document.body.classList.remove('loaded_hiding');
+	}, 100);
+}
