@@ -50,7 +50,6 @@
     "gulp-uglify": "^3.0.2",
     "inputmask": "^5.0.5",
     "ion-rangeslider": "^2.3.1",
-    "loading-attribute-polyfill": "^1.5.4",
     "popper.js": "^1.16.1",
     "postcss": "^7.0.35",
     "postcss-nested": "^4.2.3",
@@ -62,6 +61,7 @@
   "optionalDependencies": {},
   "dependencies": {
     "fslightbox": "^3.2.2",
+    "loading-attribute-polyfill": "^1.5.4",
     "swiper": "^5.4.5"
   }
 }
