@@ -24,7 +24,7 @@ module.exports = () => {
 			// 	overrideBrowserslist: ['last 5 versions']
 			// }))
 			// .pipe($.cleanCSS({ compatibility: 'ie11', level: 2 }))
-			.pipe($.gulp.dest($.public + '/css'))
+			.pipe($.gulp.dest($.public + '/'))
 			//.on('end', browserSync.stream());
 			.pipe($.browserSync.stream());
 	});

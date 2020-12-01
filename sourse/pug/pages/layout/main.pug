@@ -21,22 +21,16 @@ html(lang="ru")
 		block title
 			title title
 		meta(name="description", content="о чем страница")
-		meta(http-equiv="X-UA-Compatible" content="IE=edge")
-		meta(name="viewport", content="width=device-width, shrink-to-fit=no")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge") 
 		//- meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,  shrink-to-fit=no")
 		meta(name="viewport", content="width=device-width, shrink-to-fit=no")
 		link(type="image/ico", href='img/favicon.ico', rel='shortcut icon') 
-		<meta name="format-detection" content="telephone=no">
-
-		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;800&display=swap" rel="stylesheet">
-		// Custom Browsers Color
-		meta(name='theme-color', content='#3361d8')
+		<meta name="format-detection" content="telephone=no"> 
 		+allcss()
 	block variables
 	style.
 		.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding::before { display: none; }
-	body.loaded_hiding(class= mainPage) 
+	body(class= mainPage) 
 		.main-wrapper
 			block pagecontent
 				h3 content

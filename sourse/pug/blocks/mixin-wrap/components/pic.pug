@@ -12,7 +12,7 @@ mixin pic(i, bg,  media='576px')
 			const data = (ifLazy ?  url  : null)
 
 		if source
-			source(type=`image/${exp}` srcset=url)
+			source(type=`image/${exp}` srcset=url)&attributes(attributes)
 		else
 			img(class=(bg=="bg" ? "object-fit-js": null ) src=url alt="" loading='lazy')
 	

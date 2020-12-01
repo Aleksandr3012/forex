@@ -34,9 +34,9 @@ mixin regBlock(data)
 						+e.title!= data.t
 					block
 				.col
-					+btn(data.btn)
+					+btn(data.btn,'#reg').scroll-link
 mixin regBlockPrice(data)
-	+b.regBlock--price
+	+b.regBlock--price#reg
 		+pic('regbg-price.png','',0)
 		.container
 			.row
@@ -58,4 +58,4 @@ mixin regBlockPrice(data)
 					.h5 Стоимость участия:
 					+e.price 28 200 р.
 					+e.price-old 47 000 р.
-					+btn(data.btn).mb-3
+					+btn(data.btn,'https://info-dvd.ru/bbm/order/smartforex5')(class="mb-3 ",target="_blank")

@@ -1,13 +1,13 @@
 $default-font: "Inter";
 // $file-form: ($file-formats: woff2 woff ttf);
-$addr: '../fonts/';
+$addr: 'fonts/';
 $file-format: woff2;
 
-// @include font-face ($default-font, $addr + "Inter-Regular", $file-formats: $file-format);
-// @include font-face ($default-font, $addr + "Inter-Medium", 500, $file-formats: $file-format);
-// @include font-face ($default-font, $addr + "Inter-SemiBold", 600, $file-formats: $file-format);
-// @include font-face ($default-font, $addr + "Inter-Bold", bold, $file-formats: $file-format);
-// @include font-face ($default-font, $addr + "Inter-ExtraBold", 800, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "Inter-Regular", $file-formats: $file-format);
+@include font-face ($default-font, $addr + "Inter-Medium", 500, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "Inter-SemiBold", 600, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "Inter-Bold", bold, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "Inter-ExtraBold", 800, $file-formats: $file-format);
 
 // font-weight helper:
 

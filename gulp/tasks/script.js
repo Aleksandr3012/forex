@@ -47,7 +47,7 @@ module.exports = function () {
 
 			// .pipe($.gp.concat('common.js')
 			.pipe($.babel())
-			.pipe($.tabify(2, true))
+			.pipe($.gp.uglify().on('error', function (e) { console.log(e.message) }))
 			.pipe($.gulp.dest($.public + '/js'))
 			.pipe($.browserSync.stream());
 	}
