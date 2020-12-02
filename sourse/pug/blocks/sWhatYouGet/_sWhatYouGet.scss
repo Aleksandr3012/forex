@@ -39,8 +39,12 @@
 
 	&__imgWrap {
 		@include media-breakpoint-up(sm) {
-		position: absolute;
+			position: absolute;
 			right: rem(37);
+			top: rem(10);
+		}
+		@include media-breakpoint-up(lg) {
+			
 			top: rem(25);
 		}
 	}
