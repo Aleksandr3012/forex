@@ -42,6 +42,7 @@
 	}
 
 	&__imgWrap {
+		img{}
 		@include media-breakpoint-down(lg) {
 			text-align: center;
 			// margin-top: rem(-90);

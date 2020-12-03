@@ -28,7 +28,10 @@
 		// @include block(144,144);
 		// margin-right: 43px;
 		// flex-shrink: 0;
-		max-width: 144px;
+		// max-width: 144px;
+		img{
+			height: rem(144);
+		}
 
 		// img {
 		// 	@include a-cent;
@@ -81,7 +84,7 @@
 				width: 62px;
 				top: -25px;
 			}
-			background-image: url('img/svg/check.svg');
+			background-image: url('img/svg/quotes.svg');
 			background-repeat: no-repeat;
 			background-size: 100% 100%;
 		}

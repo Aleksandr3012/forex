@@ -18,6 +18,16 @@
 		display: block;
 		margin-bottom: rem(47);
 		max-width: 1112px;
+		margin-left: auto;
+		margin-right: auto;
+		picture{
+				@include block(888, 283);
+				img{
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+		}
 	}
 
 	&__link {

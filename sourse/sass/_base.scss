@@ -67,6 +67,7 @@ body {
 	&.loaded {
 		pointer-events: visible;
 		opacity: 1;
+		@include mt(0);
 	}
 
 	&::before {
@@ -345,6 +346,7 @@ ul {
 		opacity: 1;
 		width: 1rem;
 		height: 1rem;
+		display: inline-block;
 		border-radius: 50%;
 		background: #FFFFFF;
 		border: 1px solid #D3D3D3;

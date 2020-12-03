@@ -7,7 +7,7 @@
 	.bg {
 		// content: url(img/@2x/webp/video-bg.webp);
 		position: absolute;
-		top: 0;
+		top: rem(90);
 		z-index: -1;
 		pointer-events: none;
 		width: 100%;
